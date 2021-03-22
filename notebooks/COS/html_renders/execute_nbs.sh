@@ -6,5 +6,5 @@ for bn in $(cat ./nb_list.txt); do
     mkdir -p ~/Desktop/.temp.nosync/render
     echo Running EXECUTE for ../$bn/$bn.ipynb
     cp ../$bn/$bn.ipynb ~/Desktop/.temp.nosync/clear
-    jupyter-nbconvert --to notebook --execute --inplace ../$bn/$bn.ipynb
+    jupyter-nbconvert --ExecutePreprocessor.timeout=1500 --to notebook --execute --inplace ../$bn/$bn.ipynb
 done

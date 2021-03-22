@@ -6,5 +6,5 @@ for bn in $(cat ./nb_list.txt); do
     mkdir -p ~/Desktop/.temp.nosync/render
     echo Running RENDER for ../$bn/$bn.ipynb
     cp ../$bn/$bn.ipynb ~/Desktop/.temp.nosync/clear
-    jupyter-nbconvert --to html ../$bn/$bn.ipynb --output-dir=~/Projects/temp_renders --ExecutePreprocessor.timeout=400
+    jupyter-nbconvert --to html ../$bn/$bn.ipynb --output-dir=~/Projects/temp_renders --ExecutePreprocessor.timeout=1500
 done
