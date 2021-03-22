@@ -2,7 +2,7 @@ Setup
 ViewData
 DataDl
 LSF
-CalCOS
 AsnFile
-DayNight
 Extract
+DayNight
+CalCOS
