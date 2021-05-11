@@ -1,28 +1,39 @@
-# COS-Notebooks
+# COS Notebooks
 
-## Jupyter Notebooks of COS Data Processing Walkthroughs
-Interactive walkthrough guides to common COS data procedures for PIs and other COS data users.
+## Jupyter Notebook Walkthroughs of Cosmic Origins Spectrograph (COS) Data Processing
+The [Cosmic Origins Spectrograph](https://www.stsci.edu/hst/instrumentation/cos) (COS) is an instrument on the [Hubble Space Telescope](https://www.stsci.edu/hst/about) (HST).
+This is a repository of interactive walkthrough guides to common COS data procedures. It is intended for any and all COS data users: from undergraduates, to professional astronomers, to the general public.
 
-#### 1. [Abstract](#abs)
+#### 1. [Currently Operational Notebooks](#ch1)
 #### 2. [Basic Requirements](#ch2)
-#### 3. [Currently Operational Notebooks](#ch3)
+#### 3. [Getting Help](#ch3)
+
 ---
-<a id = abs></a>
-***Abstract***
+<a id=ch1></a>
+## Currently Operational Notebooks
 
-1.  The **goal** of this project is to produce *Jupyter Notebooks* presenting walkthroughs of common data analysis procedures for data from the Cosmic Origins Spectrograph (COS).
+If you don't want to run the notebooks for yourself but just want to see rendered html versions of the notebooks, *(with outputs,)* you may use the rendered `html` file.
 
-2.  The **users/beneficiaries** of these notebooks will be users of COS data - PIs, graduate students, undergraduates, the public - who want to work with existing COS data.
+|Name|Topic|Notebook file (`ipynb`)|Rendered file (`html`)|
+|-|-|-|-|
+|Setup|Setting up an environment to work with COS data|[Setup.ipynb](https://github.com/nkerman/notebooks/blob/main/notebooks/COS/Setup/Setup.ipynb)|[Setup.html](https://spacetelescope.github.io/COS-Notebooks/Setup.html)|
+|DataDl|Downloading COS Data from the archive|[DataDl.ipynb](https://github.com/nkerman/notebooks/blob/main/notebooks/COS/DataDl/DataDl.ipynb)|[DataDl.html](https://spacetelescope.github.io/COS-Notebooks/DataDl.html)|
+|ViewData|Beginning to work with COS data in Python: **plotting, binning, calculating SNR, & evaluating** a spectrum|[ViewData.ipynb](https://github.com/nkerman/notebooks/blob/main/notebooks/COS/ViewData/ViewData.ipynb)|[ViewData.html](https://spacetelescope.github.io/COS-Notebooks/ViewData.html)|
+|AsnFile|Modifying or creating an association file|[AsnFile.ipynb](https://github.com/nkerman/notebooks/blob/main/notebooks/COS/AsnFile/AsnFile.ipynb)|[AsnFile.html](https://spacetelescope.github.io/COS-Notebooks/AsnFile.html)|
+|CalCOS|Running the COS pipeline ([CalCOS](https://hst-docs.stsci.edu/cosdhb/chapter-3-cos-calibration))|[CalCOS.ipynb](https://github.com/nkerman/notebooks/blob/main/notebooks/COS/CalCOS/CalCOS.ipynb)|[CalCOS.html](https://spacetelescope.github.io/COS-Notebooks/CalCOS.html)|
+|DayNight|Filtering out COS data taken during the day or night|[DayNight.ipynb](https://github.com/nkerman/notebooks/blob/main/notebooks/COS/DayNight/DayNight.ipynb)|[DayNight.html](https://spacetelescope.github.io/COS-Notebooks/DayNight.html)|
+|LSF|Working with the COS Line Spread Function (LSF)|[LSF.ipynb](https://github.com/nkerman/notebooks/blob/main/notebooks/COS/LSF/LSF.ipynb)|[LSF.html](https://spacetelescope.github.io/COS-Notebooks/LSF.html)|
+|Extract|Editing the extraction boxes in a BOXCAR-method spectral extraction file (XTRACTAB)|[Extract.ipynb](https://github.com/nkerman/notebooks/blob/main/notebooks/COS/Extract/Extract.ipynb)|[Extract.html](https://spacetelescope.github.io/COS-Notebooks/Extract.html)|
 
-    1.  These notebooks will interactively teach the user to view a COS spectrum, re-bin COS data, combine COS FUV and NUV spectra into a master UV spectrum, etc.
-    2.  They will also aim to *teach* the user how to determine the best parameters for a given procedure - i.e. choosing which binning they should apply to their data. This will primarily be done with optional exercises throughout the notebooks.
----
+##### For notebooks with exercises, you can find worked solutions at the end of the notebook.
+
+
 <a id = ch2></a>
 ## Basic Requirements
 
 If you have never used Jupyter/IPython Notebooks before, please see the [Jupyter/IPython Notebook Quick Start Guide](https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/).
 
-While you *can* run most of the notebooks at present on their own, it is **highly recommended that you clone this entire repository**. Specifically, *ViewData.ipynb* cannot run at present without both the *Scripts* and *ViewData* subdirectories installed side-by-side.
+While you *can* run most of the notebooks with only the `ipynb` file downloaded, it is **highly recommended that you clone this entire repository**. Specifically, `ViewData.ipynb` cannot run at present without both the `Scripts` and `ViewData` subdirectories installed side-by-side.
 
 You need to be able to run Jupyter Notebooks and install python packages. If you don't have Jupyter installed, continue reading, or see the [Jupyter Docs](https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html) for much more detailed installation instructions.
 
@@ -45,23 +56,12 @@ We recommend installing either the Anaconda or Minicoda distributions. See [this
 
 These will install the conda command line tool, allowing you to run `conda install -c conda-forge jupyterlab`. 
 
-Next, if you don't have experience installing packages, you should begin with our notebook [Setup.ipynb](https://github.com/spacetelescope/COS-Notebooks/blob/master/Setup/Setup.ipynb) on setting up an [environment for running astronomical code](https://github.com/spacetelescope/COS-Notebooks/blob/master/Setup/Setup.ipynb), or read the pre-rendered version [here](https://spacetelescope.github.io/COS-Notebooks/Setup.html).
+Next, if you don't have experience installing packages, you should begin with our notebook [Setup.ipynb](https://github.com/nkerman/notebooks/blob/main/notebooks/COS/Setup/Setup.ipynb) on setting up an environment for running astronomical code, or read the pre-rendered version [here](https://spacetelescope.github.io/COS-Notebooks/Setup.html).
+
+<a id = ch3></a>
+## Getting Help
+
+If you have an issue using these notebooks which you cannot fix, or if believe you have discovered an error in a notebook, please reach out to the [HST Help Desk](https://stsci.service-now.com/hst) or to the notebook's primary author: <nkerman@stsci.edu>.
 
 ---
-<a id = ch3></a>
-## Currently Operational Notebooks
 
-If you don't want to run the notebooks for yourself but just want to see rendered html versions of the notebooks *(with outputs)* check out the html render.
-
-|Name|Topic|Notebook file (`ipynb`)|Rendered file (`html`)|
-|-|-|-|-|
-|Setup|Setting up an environment to work with COS data|[Setup.ipynb](https://github.com/spacetelescope/COS-Notebooks/blob/master/Setup/Setup.ipynb)|[Setup.html](https://spacetelescope.github.io/COS-Notebooks/Setup.html)|
-|DataDl|Downloading COS Data from the archive|[DataDl.ipynb](https://github.com/spacetelescope/COS-Notebooks/blob/master/DataDl/DataDl.ipynb)|[DataDl.html](https://spacetelescope.github.io/COS-Notebooks/DataDl.html)|
-|ViewData|Beginning to work with COS data in Python|[ViewData.ipynb](https://github.com/spacetelescope/COS-Notebooks/blob/master/ViewData/ViewData.ipynb)|[ViewData.html](https://spacetelescope.github.io/COS-Notebooks/ViewData.html)|
-|AsnFile|Modifying or creating an association file|[AsnFile.ipynb](https://github.com/spacetelescope/COS-Notebooks/blob/master/AsnFile/AsnFile.ipynb)|[AsnFile.html](https://spacetelescope.github.io/COS-Notebooks/AsnFile.html)|
-|CalCOS|Running the COS pipeline ([CalCOS](https://hst-docs.stsci.edu/cosdhb/chapter-3-cos-calibration))|[CalCOS.ipynb](https://github.com/spacetelescope/COS-Notebooks/blob/master/CalCOS/CalCOS.ipynb)|[CalCOS.html](https://spacetelescope.github.io/COS-Notebooks/CalCOS.html)|
-|DayNight|Filtering out COS data taken during the day or night|[DayNight.ipynb](https://github.com/spacetelescope/COS-Notebooks/blob/master/DayNight/DayNight.ipynb)|[DayNight.html](https://spacetelescope.github.io/COS-Notebooks/DayNight.html)|
-|LSF|Working with the COS Line Spread Function (LSF)|[LSF.ipynb](https://github.com/spacetelescope/COS-Notebooks/blob/master/LSF/LSF.ipynb)|[LSF.html](https://spacetelescope.github.io/COS-Notebooks/LSF.html)|
-|Extract|Editing the extraction boxes in a spectral extraction file (XTRACTAB)|[Extract.ipynb](https://github.com/spacetelescope/COS-Notebooks/blob/master/Extract/Extract.ipynb)|[Extract.html](https://spacetelescope.github.io/COS-Notebooks/Extract.html)|
-
-##### For notebooks with exercises, you can find worked solutions at the end of the notebook.
