@@ -16,3 +16,5 @@ scipy
 urllib
 tarfile
 specutils
+pandas
+IPython
